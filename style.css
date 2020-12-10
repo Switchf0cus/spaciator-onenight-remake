@@ -508,9 +508,9 @@ body {
 }
 
 .download-icons-container {
-    display: flex;
-    justify-content: center;
-    padding: 7rem;
+  display: flex;
+  justify-content: center;
+  padding: 7rem;
 }
 
 .fa-windows::before,
@@ -525,4 +525,48 @@ body {
   transform: scale(1.5);
   color: #dac22c;
   transition: all 300ms;
+}
+
+.modal-dialog{
+    margin-top: 15%;
+    border: 2px solid #a92cde;
+}
+.modal-header{
+    border-bottom: 0;
+}
+
+.modal-content{
+    background-color: #4a4949;
+}
+.modal-body{
+    padding: 0 4rem 0 4rem;
+}
+.modal-title{
+    font-family: Retro Gaming;
+    color: #dac22c;
+    font-size: 2rem;
+}
+
+.modal-description{
+    font-family: Retro Gaming;
+    color: #dac22c;
+    padding: 1rem;
+    width: 90%;
+}
+
+.modal-footer{
+    border-top: 0;
+}
+
+.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback), .input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu){
+    font-family: retro gaming;
+}
+
+.btn-primary{
+    background-color: #a92cde;
+    border: none;
+}
+.btn-primary:active, .btn-primary:hover{
+    outline: none;
+    background-color: #6a1f8b;
 }
