@@ -1,0 +1,528 @@
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: #dedddb;
+}
+
+.container-fluid {
+  background-color: #4a4949;
+  padding: 0;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/img/top_bg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  align-items: center;
+  /* padding-top: 3rem; */
+}
+
+#header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  color: #a92cde;
+  background-color: #4a4949c1;
+  width: 100%;
+  height: 80px;
+  z-index: 1;
+}
+
+#nav-bar ul {
+  display: flex;
+  align-items: center;
+}
+
+#nav-bar li {
+  list-style: none;
+}
+
+#nav-bar a {
+  color: #a92cde;
+  text-decoration: none;
+  margin: 30px 40px;
+  letter-spacing: 3px;
+  font-size: 1rem;
+  background-color: #393939;
+}
+
+#nav-bar ul li a:hover {
+  /* border-bottom: 3px solid #1c63b8; */
+  color: #dac22c;
+  /* font-weight: bold; */
+}
+#nav-bar .navbar-toggler {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  #nav-bar {
+    padding: 0;
+  }
+
+  #nav-bar ul {
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+
+    width: 100%;
+
+    background-color: #4a4949;
+    height: 100vh;
+    max-height: 0;
+    overflow: hidden;
+    transition: all ease-in-out 0.3s;
+  }
+  #nav-bar ul.open {
+    max-height: 100vh;
+  }
+  #nav-bar ul li {
+    width: 100%;
+  }
+  #nav-bar ul li a {
+    padding: 0;
+  }
+  #nav-bar .navbar-toggler {
+    display: block;
+    position: absolute;
+
+    top: 28px;
+    right: 0px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    /* border-radius: 4px; */
+    outline: none;
+    padding: 10px 10px;
+    cursor: pointer;
+  }
+
+  #nav-bar .navbar-toggler span,
+  #nav-bar .navbar-toggler span::before,
+  #nav-bar .navbar-toggler span::after {
+    display: block;
+    content: "";
+    background-color: #333;
+    height: 3px;
+    width: 28px;
+    border-radius: 4px;
+    transition: all ease-in-out 0.3s;
+  }
+  #nav-bar .navbar-toggler span::before {
+    transform: translateY(-8px);
+  }
+  #nav-bar .navbar-toggler span::after {
+    transform: translateY(5px);
+  }
+
+  #nav-bar .navbar-toggler.open-navbar-toggler span {
+    background-color: transparent;
+  }
+
+  #nav-bar .navbar-toggler.open-navbar-toggler span::before {
+    transform: translateY(0px) rotate(45deg);
+  }
+  #nav-bar .navbar-toggler.open-navbar-toggler span::after {
+    transform: translateY(-3px) rotate(-45deg);
+  }
+}
+
+.header-title-image {
+  width: 50%;
+  height: 40%;
+  background-image: url(/img/spaciator_title.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.intro-text {
+  text-align: center;
+  width: 40%;
+  font-family: "Retro Gaming";
+  color: #dedddb;
+  font-size: 1.2em;
+}
+
+.intro-hg-1 {
+  color: #a92cde;
+}
+.intro-hg-2 {
+  color: #dac22c;
+}
+
+#coin-button {
+  margin-top: 2%;
+  width: 200px;
+  height: 100px;
+  background-image: url(/img/Bob_running.gif);
+  background-repeat: no-repeat;
+  background-color: #a92cde;
+  border-bottom: 6px inset rgba(0, 0, 0, 0.5);
+  border-left: 6px inset rgba(0, 0, 0, 0.5);
+  border-right: 6px inset rgba(255, 255, 255, 0.5);
+  border-top: 6px inset rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.signup-title {
+  width: 50%;
+  margin-left: 40%;
+  color: #dac22c;
+  font-family: "Retro Gaming";
+  font-size: 1.5rem;
+}
+
+#coin-button:active {
+  outline: none;
+  border-bottom: 7px inset rgba(0, 0, 0, 0.5);
+  border-left: 8px inset rgba(0, 0, 0, 0.5);
+  border-right: 8px inset rgba(255, 255, 255, 0.5);
+  border-top: 8px inset rgba(255, 255, 255, 0.5);
+}
+#coin-button:focus {
+  outline: none;
+}
+
+.trailer-container {
+  background-image: url(/img/middle_bg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trailer-title-box {
+  top: 100px;
+}
+
+.trailer-title {
+  width: auto;
+  display: inline-block;
+  font-family: "Retro Gaming";
+  color: #dac22c;
+  font-size: 3.5rem;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid #a92cde; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.05em; /* Adjust as needed */
+  animation: typing 1.5s steps(40, end), blink-caret 0.8s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #942bb4;
+  }
+}
+
+.trailer-video-container {
+  width: 75%;
+  height: 70%;
+  padding: 1.3rem;
+  margin-top: 4rem;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #a92cde,
+    #dac22c 25px,
+    #a92cde 5px,
+    black 50px
+  );
+  -webkit-animation: progress 2s linear infinite;
+  -moz-animation: progress 2s linear infinite;
+  -ms-animation: progress 2s linear infinite;
+  animation: progress 2s linear infinite;
+  background-size: 150% 100%;
+}
+
+@-webkit-keyframes progress {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -75px 0px;
+  }
+}
+@-moz-keyframes progress {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -75px 0px;
+  }
+}
+@-ms-keyframes progress {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -75px 0px;
+  }
+}
+@keyframes progress {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -70px 0px;
+  }
+}
+
+.update-container {
+  background-image: url(/img/bottom_bg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.update-content-container {
+  margin: auto;
+  width: 20vw;
+  height: 35vh;
+  background-color: #4a4949;
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.8rem;
+  border-radius: 30px;
+  color: #dedddb;
+  font-family: "Brass Mono Comfortable";
+  box-shadow: inset 0 3px 20px #dac22c;
+  transition: all 600ms ease-out;
+}
+
+.update-content-container:hover {
+  animation-play-state: running;
+  transform: scale(1.5);
+  transition: all 0.5s ease-out;
+  border-radius: 50%;
+}
+
+.three-w-container {
+  background-image: url(/img/bottom2.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.three-w-content-container {
+  width: 70%;
+  margin: auto;
+}
+
+.accordion {
+  margin: auto;
+  max-width: 70%;
+  background-color: transparent;
+  color: #dedddb;
+  /* border: 1px solid #dac22c; */
+  /* padding: 1rem; */
+  border-radius: 5px;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #dac22c;
+  background-color: #4a4949;
+  border-radius: 5px;
+}
+.accordion-button {
+  color: #dac22c;
+  background-color: #4a4949;
+  border-radius: 5px;
+}
+.accordion-body {
+  border: inset 0 2px 10 #dac22c !important;
+  background-color: #4a494955;
+  text-align: center;
+  padding: 2rem;
+  font-family: "Brass Mono Comfortable";
+}
+
+.accordion-button:not(.collaped):focus {
+  outline: none;
+}
+
+.footer-container {
+  width: 100vw;
+  height: auto;
+  background-color: #4a4949;
+}
+
+.footer {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+}
+
+.social-media-container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 40%;
+  height: auto;
+  padding: 2rem;
+}
+
+.fa-twitter::before,
+.fa-youtube::before,
+.fa-facebook-f::before {
+  font-size: 3rem;
+  padding: 1.5rem;
+  transition: all 300ms;
+}
+.fa-twitter:hover,
+.fa-youtube:hover,
+.fa-facebook-f:hover {
+  transform: scale(1.2);
+  transition: all 300ms;
+  color: #a92cde;
+}
+
+.newsletter-container {
+  width: 45%;
+  margin: auto;
+  background-color: #666666;
+  padding: 1rem;
+  border: 2px solid #a92cde;
+}
+
+.newsletter-title {
+  font-family: "Brass Mono Comfortable";
+  color: #dac22c;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.download-page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 5rem;
+  background: linear-gradient(331deg, #7500a7, #008700);
+  background-size: 400% 400%;
+  height: auto;
+  min-height: 100vh;
+  -webkit-animation: AnimationName 9s ease infinite;
+  -moz-animation: AnimationName 9s ease infinite;
+  animation: AnimationName 9s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 30% 0%;
+  }
+  50% {
+    background-position: 71% 100%;
+  }
+  100% {
+    background-position: 30% 0%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 30% 0%;
+  }
+  50% {
+    background-position: 71% 100%;
+  }
+  100% {
+    background-position: 30% 0%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 30% 0%;
+  }
+  50% {
+    background-position: 71% 100%;
+  }
+  100% {
+    background-position: 30% 0%;
+  }
+}
+
+.download-title-container {
+  width: 60%;
+  text-align: center;
+}
+.download-title {
+  font-family: "Retro Gaming";
+  letter-spacing: 3px;
+  color: #dac22c;
+  font-size: 4rem;
+}
+
+.download-box-container {
+  width: 50%;
+  height: 40vh;
+  margin: auto;
+  background-color: #666666;
+}
+
+.download-icons-container {
+    display: flex;
+    justify-content: center;
+    padding: 7rem;
+}
+
+.fa-windows::before,
+.fa-apple::before {
+  font-size: 5rem;
+  padding: 1.5rem;
+  transition: all 300ms;
+}
+
+.fa-windows:hover,
+.fa-apple:hover {
+  transform: scale(1.5);
+  color: #dac22c;
+  transition: all 300ms;
+}
