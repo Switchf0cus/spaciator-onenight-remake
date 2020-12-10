@@ -368,22 +368,24 @@ body {
   border-radius: 5px;
 }
 
-.accordion-button:not(.collapsed) {
+.accordion-button:not(.collapsed){
   color: #dac22c;
   background-color: #4a4949;
   border-radius: 5px;
+  font-family: 'Retro Gaming';
 }
 .accordion-button {
   color: #dac22c;
   background-color: #4a4949;
   border-radius: 5px;
+  font-family: 'Retro Gaming';
 }
 .accordion-body {
   border: inset 0 2px 10 #dac22c !important;
   background-color: #4a494955;
   text-align: center;
   padding: 2rem;
-  font-family: "Brass Mono Comfortable";
+  font-family: Brass Mono Comfortable;
 }
 
 .accordion-button:not(.collaped):focus {
@@ -569,4 +571,8 @@ body {
 .btn-primary:active, .btn-primary:hover{
     outline: none;
     background-color: #6a1f8b;
+}
+
+.newsletter-text-link{
+    color: #a92cde;
 }

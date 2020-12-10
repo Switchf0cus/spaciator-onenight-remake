@@ -20,8 +20,8 @@
                 <nav id="nav-bar">
                   <ul>
                     <li><a class="nav-link" href="index.html">Home</a></li>
-                    <li><a class="nav-link" href="#">Login</a></li>
-                    <li><a class="nav-link" href="#">Signup</a></li>
+                    <li><a class="nav-link" data-bs-toggle="modal" data-bs-target="#LoginModal">Login</a></li>
+                    <li><a class="nav-link" data-bs-toggle="modal" data-bs-target="#SignupModal" >Signup</a></li>
                     <li><a class="nav-link" href="download.html">Download</a></li>
                   </ul>
                   <button class="navbar-toggler">
@@ -46,12 +46,12 @@
 
 
             <!-- Button trigger modal -->
-<button type="button"id="coin-button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button"id="coin-button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#SignupModal">
     <h1 class="signup-title"> Sign Up!</h1>
   </button>
   
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="SignupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -75,6 +75,35 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           <button type="button"  class="btn btn-primary">Sign-Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-description" >
+            <p class="modal-description">Login to access your download link, also keep an eye out for the <a class="newsletter-text-link" href="#newsletter-container">newsletter</a> , big updates coming soon ;)</p>
+        </div>
+        
+        <div class="modal-body">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">*</span>
+                <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button"  class="btn btn-primary">Login</button>
         </div>
       </div>
     </div>
@@ -107,7 +136,7 @@
                     limited number of people. <br><br>
 
                     If you would like to know more, sign up to our
-                    <span class="intro-hg-2">newsletter</span>
+                    <span class="intro-hg-2"><a class="newsletter-text-link" href="#newsletter-container">newsletter</a></span>
                     in the footer
                     :)</p>
             </div>
@@ -152,11 +181,11 @@
         <div class="footer-container">
             <div class="footer">
                 <div class="social-media-container">
-                    <i href="https://twitter.com/NitrateStudios" class="fab fa-twitter fs-4"></i>
-                    <i class="fab fa-facebook-f fs-4"></i>
-                    <i class="fab fa-youtube fs-4"></i>
+                    <a href="https://twitter.com/NitrateStudios"><i class="fab fa-twitter fs-4"></i></a>
+                    <a href="https://www.facebook.com/Nitrate-Studios-107845914479478"><i class="fab fa-facebook-f fs-4"></i></a>
+                    <a href="https://www.youtube.com/channel/UCgbvrA3LnzTYbX4sX0K3XJw"><i class="fab fa-youtube fs-4"></i></a>
                 </div>
-                <div class="newsletter-container">
+                <div class="newsletter-container" id="newsletter-container">
                     <h3 class="newsletter-title">Sign up to our newsletter</h3>
                     <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
                     <script>
